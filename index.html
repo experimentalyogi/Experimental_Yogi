@@ -1,5 +1,10 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The 300s here reloads the BROWSER. It is NOT the data cadence: daemon._tend_dashboard
+     republishes every 30 min on weekdays 09:30-16:00 only, plus dashboard_eod at 18:50.
+     Overnight and at weekends these reloads fetch identical bytes, which is why the
+     footer states both numbers -- "auto-refreshes every 5 min" read as a freshness
+     promise the system does not make. -->
 <meta http-equiv="refresh" content="300">
 <title>Investing Paper Dashboard</title>
 <style>
@@ -49,8 +54,8 @@ padding:3px 10px;border-radius:20px;cursor:pointer}.chip.active{color:var(--fg);
 th.srt{cursor:pointer;user-select:none}th.srt:hover{color:var(--fg)}.ind{color:var(--pos);font-size:10px}
 </style></head><body>
 <h1>Investing Paper Dashboard</h1>
-<div class="sub">updated 2026-08-23 22:03 ET &middot; auto-refreshes every 5 min &middot; paper / research, not P&amp;L</div>
-<div class='ops'><span class='op'><b class='pos'>&#9679;</b> daemon alive <span class='sec'>at 22:03:25</span></span> &middot; <span class='op'><b class='pos'>&#9679;</b> EG monitor alive</span> &middot; <span class='op'>8 jobs fired today, <b class='neg'>1 did not succeed</b> <span class='sec'>(si_weekly)</span></span> &middot; <span class='op'>roll-up <b class='neg'>3 ok | 1 degraded | 1 failed | 1 skipped</b> <span class='sec'>2026-08-21 19:51 &mdash; 2 days ago; no weekend EOD</span></span></div>
+<div class="sub">updated 2026-08-23 23:16 ET &middot; page reloads every 5 min; DATA republished every 30 min while the market is open, then once at 18:50 &middot; paper / research, not P&amp;L</div>
+<div class='ops'><span class='op'><b class='pos'>&#9679;</b> daemon alive <span class='sec'>at 23:16:25</span></span> &middot; <span class='op'><b class='pos'>&#9679;</b> EG monitor alive</span> &middot; <span class='op'>8 jobs fired today, <b class='neg'>1 did not succeed</b> <span class='sec'>(si_weekly)</span></span> &middot; <span class='op'>roll-up <b class='neg'>3 ok | 1 degraded | 1 failed | 1 skipped</b> <span class='sec'>2026-08-21 19:51 &mdash; 2 days ago; no weekend EOD</span></span></div>
 <div class="overall">
 <div><div class="big pos">+10.7%</div><div class="lbl">avg unrealized</div></div>
 <div><div class="big pos">+0.9%</div><div class="lbl">today (book)</div></div>
